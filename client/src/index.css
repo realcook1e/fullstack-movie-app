@@ -20,3 +20,11 @@ body {
 	max-width: 1440px;
 	margin: 0 auto;
 }
+
+a.active {
+	color: #e60000;
+}
+
+a.active:hover {
+	color: #e60000;
+}
