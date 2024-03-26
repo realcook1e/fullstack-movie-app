@@ -11,7 +11,7 @@ const LoginForm = () => {
 		if (response.isSuccess) {
 			setTimeout(() => {
 				navigate("/");
-			}, 2500);
+			}, 1500);
 		}
 	}, [response.isSuccess]);
 
