@@ -16,7 +16,13 @@ const Nav = ({ menu, hasLogo, isHeader }) => {
 					/>
 				</div>
 			)}
-			{menu && <Menu items={menu} />}
+			{menu && (
+				<Menu
+					items={menu}
+					inHeader={true}
+					style={{ fontSize: "18px", fontWeight: "700" }}
+				/>
+			)}
 			{isHeader && <HeaderControls />}
 		</nav>
 	);

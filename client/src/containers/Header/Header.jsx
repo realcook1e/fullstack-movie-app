@@ -1,25 +1,6 @@
-import styles from "./Header.module.scss";
-
 import Nav from "../../components/Nav/Nav";
-
-const MENU = [
-	{
-		link: "/",
-		title: "Главная",
-	},
-	{
-		link: "/films",
-		title: "Фильмы",
-	},
-	{
-		link: "/actors",
-		title: "Актеры",
-	},
-	{
-		link: "/feedback",
-		title: "Связаться",
-	},
-];
+import { MENU } from "../../constants/menu";
+import styles from "./Header.module.scss";
 
 const Header = () => {
 	return (
