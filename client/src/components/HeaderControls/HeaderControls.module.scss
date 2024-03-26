@@ -1,4 +1,20 @@
 .headerControls {
 	display: flex;
 	gap: 10px;
+	&__link {
+		font-size: 20px;
+		font-weight: bold;
+		cursor: pointer;
+		color: #fff;
+		text-decoration: none;
+		&:hover {
+			color: #ccc;
+		}
+		&_username {
+			color: #d60505;
+			&:hover {
+				color: #b60808;
+			}
+		}
+	}
 }

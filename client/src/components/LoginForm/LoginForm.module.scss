@@ -1,0 +1,68 @@
+.loginForm {
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	&__buttons {
+		margin-top: 20px;
+		display: flex;
+		gap: 15px;
+	}
+	&__input {
+		margin-bottom: 20px;
+		padding: 10px 50px 10px 25px;
+		background-color: #062755;
+		color: #fff;
+		border: 1px solid transparent;
+		outline: 0;
+		&::placeholder {
+			color: #ccc;
+		}
+		&:focus {
+			border-color: #1051b3;
+		}
+	}
+	&__failure {
+		color: var(--error-color);
+	}
+	&__success {
+		color: var(--success-color);
+	}
+	button,
+	a {
+		height: 45px;
+		text-align: center;
+		outline: none;
+		border: none;
+		margin-bottom: 10px;
+	}
+	.btnLogin {
+		display: block;
+		border-radius: 0;
+		background-color: #d60505;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 700;
+		width: 48%;
+		&:hover {
+			background-color: #b60808;
+		}
+	}
+	.btnRegister {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		border-radius: 0;
+		background-color: white;
+		color: #000;
+		font-size: 20px;
+		font-weight: 700;
+		transition: 0.25s all;
+		width: 48%;
+		&:hover {
+			background-color: #d9d8d8;
+		}
+	}
+}
