@@ -9,6 +9,7 @@ import Profile from "./pages/Profile/Profile";
 import Users from "./pages/Users/Users";
 import AddFilm from "./pages/AddFilm/AddFilm";
 import Movies from "./pages/Movies/Movies";
+import MovieDetails from "./pages/MovieDetails/MovieDetails";
 
 function App() {
 	const isLogged = useSelector(state => state.authSlice.isLogged);
@@ -50,6 +51,10 @@ function App() {
 				<Route
 					path='movies/add'
 					element={<AddFilm />}
+				></Route>
+				<Route
+					path='movies/:id'
+					element={<MovieDetails />}
 				></Route>
 			</Route>
 		</Routes>
