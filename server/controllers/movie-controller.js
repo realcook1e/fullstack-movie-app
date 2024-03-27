@@ -5,11 +5,6 @@ const { validationResult } = require("express-validator");
 class MovieController {
 	async addMovie(req, res, next) {
 		try {
-			const errors = validationResult(req);
-			if (!errors.isEmpty()) {
-				throw new Error(`Ошибка при заполнении данных о фильме`);
-			}
-
 			const {
 				title,
 				description,
@@ -20,8 +15,10 @@ class MovieController {
 				director,
 				duration,
 				rating,
-				poster,
 			} = req.body;
+			let poster = req.file;
+			console.log(poster);
+
 			const movieData = await movieService.add({
 				title,
 				description,

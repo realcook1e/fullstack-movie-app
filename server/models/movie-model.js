@@ -8,7 +8,7 @@ const MovieSchema = new Schema({
 	casting: { type: String, required: true },
 	director: { type: String, required: true },
 	duration: { type: Number },
-	rating: { type: Number },
+	rating: { type: Schema.Types.Decimal128 },
 	year: { type: Number, required: true },
 	poster: { type: String, required: true },
 });

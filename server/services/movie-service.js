@@ -12,7 +12,7 @@ class MovieService {
 			director: movie.director,
 			duration: movie.duration,
 			rating: movie.rating,
-			poster: movie.poster,
+			poster: movie.poster.path.replace("\\", "/"),
 		});
 
 		return movieData;
