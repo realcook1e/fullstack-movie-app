@@ -8,8 +8,8 @@ export const MENU = [
 		title: "Фильмы",
 	},
 	{
-		link: "/actors",
-		title: "Актеры",
+		link: "/favorites",
+		title: "Избранное",
 	},
 	{
 		link: "/feedback",

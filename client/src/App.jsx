@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Contacts from "./pages/Contacts/Contacts";
+import Profile from "./pages/Profile/Profile";
+import Users from "./pages/Users/Users";
 
 function App() {
 	const isLogged = useSelector(state => state.authSlice.isLogged);
@@ -30,6 +32,14 @@ function App() {
 				<Route
 					path='feedback'
 					element={<Contacts />}
+				></Route>
+				<Route
+					path='users'
+					element={<Users />}
+				></Route>
+				<Route
+					path='users/:username'
+					element={<Profile />}
 				></Route>
 			</Route>
 		</Routes>

@@ -1,0 +1,28 @@
+.title {
+	margin-top: 120px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 32px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.users {
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: 40px;
+	&__headers {
+		padding: 20px;
+		font-size: 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__headersTitle {
+		width: 25%;
+		text-align: center;
+		font-weight: 700;
+	}
+	&__actionsTitle {
+		width: 30%;
+	}
+}

@@ -1,0 +1,37 @@
+.userItem {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	font-size: 20px;
+	border-bottom: 1px solid #1051b3;
+	&__field {
+		width: 25%;
+		text-align: center;
+	}
+	&__actionsField {
+		width: 30%;
+	}
+	&__failure {
+		color: var(--error-color);
+	}
+	&__actions {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 25px;
+	}
+	&__link {
+		color: #fff;
+		text-decoration: underline;
+		cursor: pointer;
+		font-size: 18px;
+		&:hover {
+			color: #d9d8d8;
+		}
+	}
+	&__userLink {
+		color: #d60505;
+		&:hover {
+			color: #b60808;
+		}
+	}
+}

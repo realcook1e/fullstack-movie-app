@@ -1,0 +1,59 @@
+.profile {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 40px;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	&__row {
+		display: flex;
+	}
+
+	&__title {
+		font-weight: 700;
+		min-width: 150px;
+	}
+	&__adminControls {
+		margin-top: 60px;
+	}
+}
+
+.adminControls {
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		color: #fff;
+	}
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		margin-top: 20px;
+		height: 40px;
+		text-decoration: none;
+		border-radius: 20px;
+		background-color: white;
+		color: #000;
+		font-size: 20px;
+		font-weight: 700;
+		transition: 0.25s all;
+		width: 80%;
+
+		&:hover {
+			background-color: #d9d8d8;
+		}
+	}
+}
+.title {
+	margin-top: 120px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 32px;
+	color: #fff;
+	text-transform: uppercase;
+	span {
+		border-bottom: 4px solid #d60505;
+	}
+}
