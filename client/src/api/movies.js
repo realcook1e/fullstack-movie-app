@@ -12,7 +12,37 @@ export const moviesApi = createApi({
 				body,
 			}),
 		}),
+		getAllMovies: builder.query({
+			query: () => ({
+				url: `/`,
+				method: "GET",
+			}),
+		}),
+		getMovieInfo: builder.query({
+			query: id => ({
+				url: `/${id}`,
+				method: "GET",
+			}),
+		}),
+		getMoviePoster: builder.query({
+			query: id => ({
+				url: `/${id}/poster`,
+				method: "GET",
+			}),
+		}),
+		removeMovie: builder.mutation({
+			query: id => ({
+				url: `/${id}`,
+				method: "DELETE",
+			}),
+		}),
 	}),
 });
 
-export const { useAddMovieMutation } = moviesApi;
+export const {
+	useAddMovieMutation,
+	useGetAllMoviesQuery,
+	useGetMovieInfoQuery,
+	useGetMoviePosterQuery,
+	useRemoveMovieMutation,
+} = moviesApi;

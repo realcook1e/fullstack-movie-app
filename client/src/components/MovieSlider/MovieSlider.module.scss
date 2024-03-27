@@ -1,0 +1,13 @@
+.movieSlider {
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 120px;
+	&__title {
+		font-size: 30px;
+		margin-bottom: 35px;
+	}
+	a {
+		text-decoration: none;
+	}
+}

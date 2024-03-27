@@ -60,6 +60,17 @@ class MovieController {
 		}
 	}
 
+	async getMoviePoster(req, res, next) {
+		try {
+			const { id } = req.params;
+			const movieData = await MovieModel.findOne({ _id: id });
+			return res.status(200).json(`${req.protocol}://${req.get("host")}/${movieData.poster}`);
+		} catch (e) {
+			console.log(e);
+			res.status(500).json({ message: e.message });
+		}
+	}
+
 	async editMovie(req, res, next) {
 		try {
 			const { id } = req.params;

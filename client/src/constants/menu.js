@@ -4,7 +4,7 @@ export const MENU = [
 		title: "Главная",
 	},
 	{
-		link: "/films",
+		link: "/movies",
 		title: "Фильмы",
 	},
 	{
