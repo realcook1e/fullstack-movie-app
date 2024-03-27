@@ -7,6 +7,7 @@ const roleRouter = require("./router/roleRouter.js");
 const userRouter = require("./router/userRouter.js");
 const movieRouter = require("./router/movieRouter.js");
 const reviewRouter = require("./router/reviewRouter.js");
+const feedbackRouter = require("./router/feedbackRouter.js");
 
 const PORT = 5000;
 const DB_URL =
@@ -21,6 +22,7 @@ app.use("/api/users", userRouter);
 app.use("/api/roles", roleRouter);
 app.use("/api/movies", movieRouter);
 app.use("/api/reviews", reviewRouter);
+app.use("/api/feedbacks", feedbackRouter);
 
 const start = async () => {
 	try {

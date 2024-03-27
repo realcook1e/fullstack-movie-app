@@ -5,7 +5,11 @@ const MovieSchema = new Schema({
 	description: { type: String, required: true },
 	country: { type: String, required: true },
 	genre: { type: String, required: true },
-	year: { type: Number },
+	casting: { type: String, required: true },
+	director: { type: String, required: true },
+	duration: { type: Number },
+	rating: { type: Number },
+	year: { type: Number, required: true },
 	poster: { type: String, required: true },
 });
 

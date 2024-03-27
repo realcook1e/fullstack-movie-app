@@ -8,6 +8,10 @@ class MovieService {
 			genre: movie.genre,
 			year: movie.year,
 			country: movie.country,
+			casting: movie.casting,
+			director: movie.director,
+			duration: movie.duration,
+			rating: movie.rating,
 			poster: movie.poster,
 		});
 

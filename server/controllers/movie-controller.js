@@ -10,13 +10,28 @@ class MovieController {
 				throw new Error(`Ошибка при заполнении данных о фильме`);
 			}
 
-			const { title, description, genre, year, country, poster } = req.body;
+			const {
+				title,
+				description,
+				genre,
+				year,
+				country,
+				casting,
+				director,
+				duration,
+				rating,
+				poster,
+			} = req.body;
 			const movieData = await movieService.add({
 				title,
 				description,
 				genre,
 				year,
 				country,
+				casting,
+				director,
+				duration,
+				rating,
 				poster,
 			});
 
