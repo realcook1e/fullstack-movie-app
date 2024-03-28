@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const moviesApi = createApi({
 	reducerPath: "moviesApi",
-	tagTypes: ["Movies"],
+	tagTypes: ["Movies", "Reviews"],
 	baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api/movies" }),
 	endpoints: builder => ({
 		addMovie: builder.mutation({
@@ -36,6 +36,16 @@ export const moviesApi = createApi({
 				method: "DELETE",
 			}),
 		}),
+		getComments: builder.query({
+			query: id => ({
+				url: `/${id}/comments`,
+				method: "GET",
+			}),
+			providesTags: (result, error, arg) =>
+				result
+					? [...result.map(({ id }) => ({ type: "Reviews", id })), "Reviews"]
+					: ["Reviews"],
+		}),
 	}),
 });
 
@@ -45,4 +55,5 @@ export const {
 	useGetMovieInfoQuery,
 	useGetMoviePosterQuery,
 	useRemoveMovieMutation,
+	useGetCommentsQuery,
 } = moviesApi;

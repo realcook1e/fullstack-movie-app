@@ -1,9 +1,20 @@
 .movieCard {
 	display: flex;
 	gap: 120px;
-	width: 1100px;
+	max-width: 1100px;
 	margin: 0 auto;
 	margin-top: 100px;
+	&__like {
+		cursor: pointer;
+		width: 25px;
+		height: 25px;
+		transition: 0.4s all;
+		fill: transparent;
+		&_active {
+			fill: rgb(236, 97, 97);
+			stroke: rgb(234, 96, 96);
+		}
+	}
 	&__poster {
 		position: relative;
 	}

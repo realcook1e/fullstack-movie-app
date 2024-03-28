@@ -21,5 +21,6 @@ movieRouter.get("/:id", movieController.getMovie);
 movieRouter.get("/:id/poster", movieController.getMoviePoster);
 movieRouter.put("/:id", movieController.editMovie);
 movieRouter.delete("/:id", movieController.deleteMovie);
+movieRouter.get("/:id/comments", movieController.getComments);
 
 module.exports = movieRouter;

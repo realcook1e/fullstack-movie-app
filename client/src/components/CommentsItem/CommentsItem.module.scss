@@ -1,0 +1,27 @@
+.commentsItem {
+	margin-bottom: 30px;
+	border: 1px solid #1051b3;
+	padding: 15px 30px;
+	&__info {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+	}
+	&__link {
+		font-size: 18px;
+		text-decoration: none;
+		color: #d60505;
+		font-weight: 700;
+		&:hover {
+			color: #b60808;
+		}
+	}
+	&__date {
+		color: #ccc;
+		font-size: 14px;
+	}
+	&__text {
+		margin-top: 15px;
+		font-size: 22px;
+	}
+}

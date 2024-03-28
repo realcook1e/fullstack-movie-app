@@ -1,4 +1,5 @@
 const MovieModel = require("../models/movie-model");
+const ReviewModel = require("../models/review-model");
 const movieService = require("../services/movie-service");
 const { validationResult } = require("express-validator");
 
@@ -90,6 +91,17 @@ class MovieController {
 		} catch (e) {
 			console.log(e);
 			res.status(500).json({ message: "Ошибка при удалении фильма" });
+		}
+	}
+
+	async getComments(req, res, next) {
+		try {
+			const { id } = req.params;
+			const comments = await ReviewModel.find({ movieID: id });
+			return res.status(200).json(comments);
+		} catch (e) {
+			console.log(e);
+			res.status(500).json({ message: e.message });
 		}
 	}
 }

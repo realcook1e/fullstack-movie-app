@@ -1,0 +1,21 @@
+.title {
+	text-align: center;
+	font-weight: 800;
+	font-size: 24px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-top: 50px;
+}
+
+.info {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.link {
+	color: #d60505;
+	font-weight: 700;
+	&:hover {
+		color: #b60808;
+	}
+}

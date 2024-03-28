@@ -51,6 +51,18 @@ class UserController {
 		}
 	}
 
+	async getOneById(req, res, next) {
+		try {
+			const { id } = req.params;
+			const user = await UserModel.findOne({ _id: id });
+			const userDto = new UserDto(user);
+			return res.status(200).json(userDto);
+		} catch (e) {
+			console.log(e);
+			res.status(500).json({ message: "Ошибка получения данных о пользователе" });
+		}
+	}
+
 	async addMovieToFavorites(req, res, next) {
 		try {
 			const { username } = req.params;
@@ -62,6 +74,32 @@ class UserController {
 		} catch (e) {
 			console.log(e);
 			res.status(500).json({ message: "Ошибка при добавлении фильма в избранное" });
+		}
+	}
+
+	async removeMovieFromFavorites(req, res, next) {
+		try {
+			const { username } = req.params;
+			const { movieID } = req.body;
+			const user = await UserModel.updateOne(
+				{ username },
+				{ $pull: { favorite_movies: movieID } }
+			);
+			return res.status(200).json({ message: "Фильм удален из избранного" });
+		} catch (e) {
+			console.log(e);
+			res.status(500).json({ message: "Ошибка при удалении фильма из избранного" });
+		}
+	}
+
+	async getFavoriteMovies(req, res, next) {
+		try {
+			const { username } = req.params;
+			const user = await UserModel.findOne({ username });
+			return res.status(200).json(user.favorite_movies);
+		} catch (e) {
+			console.log(e);
+			res.status(500).json({ message: "Ошибка получения любимых фильмов" });
 		}
 	}
 }

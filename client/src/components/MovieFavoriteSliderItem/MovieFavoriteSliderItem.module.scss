@@ -1,0 +1,39 @@
+.movieItem {
+	position: relative;
+	text-align: center;
+	width: 220px;
+	margin-right: 110px;
+	img {
+		width: 100%;
+	}
+	&__title {
+		color: #fff;
+		text-decoration: none;
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+	&__rating {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 40px;
+		right: -20px;
+		width: 45px;
+		height: 45px;
+		background-color: #fff;
+		border-radius: 50%;
+		color: #000;
+		font-size: 22px;
+		font-weight: 800;
+		&_high {
+			color: rgb(11, 144, 11);
+		}
+		&_medium {
+			color: rgb(244, 177, 19);
+		}
+		&_low {
+			color: rgb(200, 28, 19);
+		}
+	}
+}

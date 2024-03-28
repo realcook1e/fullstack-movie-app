@@ -4,6 +4,7 @@ import { authApi } from "../api/auth";
 import { feedbackApi } from "../api/feedback";
 import { usersApi } from "../api/users";
 import { moviesApi } from "../api/movies";
+import { reviewsApi } from "../api/reviews";
 
 export const store = configureStore({
 	reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
 		[feedbackApi.reducerPath]: feedbackApi.reducer,
 		[usersApi.reducerPath]: usersApi.reducer,
 		[moviesApi.reducerPath]: moviesApi.reducer,
+		[reviewsApi.reducerPath]: reviewsApi.reducer,
 		authSlice,
 	},
 	middleware: getDefaultMiddleware =>
@@ -18,7 +20,8 @@ export const store = configureStore({
 			.concat(authApi.middleware)
 			.concat(feedbackApi.middleware)
 			.concat(usersApi.middleware)
-			.concat(moviesApi.middleware),
+			.concat(moviesApi.middleware)
+			.concat(reviewsApi.middleware),
 });
 
 const saveToLocalStorage = state => {
