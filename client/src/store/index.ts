@@ -1,4 +1,3 @@
-import { Root } from "./../../../node_modules/@types/react-dom/client.d";
 import { configureStore } from "@reduxjs/toolkit";
 import authSlice from "./authSlice";
 import { authApi } from "../api/auth";
